@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #FFFFFF;
+    --color-cream: #F7F2EC;
+    --color-light-mint: #E1EDE9;
+    --color-aqua: #89D3D2;
+    --color-peach: #F0DACD;
+    --color-brown: #BF8B70;
+    --color-dark-brown: #29180F;
+  }
+
+body{
+    background-color: var(--color-cream);
+    -webkit-font-smoothing: antialiased;
+}

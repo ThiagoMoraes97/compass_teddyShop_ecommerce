@@ -1,0 +1,92 @@
+.header_info{
+    width: 100%;
+    background-color: var(--color-peach);
+    text-align: center;
+
+
+    > .header_info_content{
+        max-width: 93rem;
+        padding: 0.6875rem 4.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        color: rgba(0, 0, 0, 0.82);
+        font-family: "Roboto Serif";
+        font-size: 0.9375rem;
+        line-height: 120%; 
+        text-transform: capitalize;
+    }
+}
+
+nav{
+    width: 100%;
+    background-color: var(--color-white);
+    
+    > .nav_content{
+        max-width: 93rem;
+        padding: 1.5625rem 4.2rem;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+
+        > .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 9.0625rem;
+        }
+
+        > .text_links{
+            display: flex;
+            align-items: center;
+            gap: 2.5625rem;
+            margin-right: 2.375rem;
+
+            a:nth-child(2){
+                display: flex;
+                align-items: center;
+                gap: .25rem;
+            }
+
+            a {
+                color: var(--color-dark-brown);
+                font-family: "Roboto Serif";
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 150%;
+                text-decoration: none;
+            }
+        }
+
+        > .icon_links{
+            display: flex;
+            align-items: center;
+            gap: 1.1875rem;
+            margin-right: 3.5625rem;
+
+          a{
+            color: var(--color-dark-brown);
+            font-family: "Roboto Serif";
+            line-height: 150%;
+            text-decoration: none;
+            font-size: 24px;
+          }
+        }
+
+        > button {
+            background-color: var(--color-aqua);
+            color: var(--color-white);
+            border-radius: 71px;
+            padding: .5rem 1.25rem;
+            border: none;
+            cursor: pointer;
+
+            font-family: "Roboto Serif";
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 150%; 
+        }
+
+    }
+}
