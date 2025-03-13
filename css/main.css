@@ -176,3 +176,82 @@
 
     
 }
+
+.services {
+    width: 100%;
+    background-color: var(--color-light-mint);
+    padding-top: 3.9375rem;
+
+    > .services-content {
+        max-width: 90rem;
+        margin: 0 auto;
+        font-family: "Roboto Serif";
+        padding-bottom: 4.4375rem;
+
+        > .title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.375rem;
+            margin-bottom: 3.125rem;
+
+            > h2 {
+                color: #29180F;
+                font-size: 3rem;
+                font-weight: 600;
+                line-height: 120%;
+                text-transform: capitalize;
+            }
+        }
+
+        > .services-cards-wrapper {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2.75rem;
+    
+            > .services-card {
+                background-color: white;
+                border-radius: 31px;
+                text-align: center;
+                border: 3px solid #C9B079;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                max-width: 23.625rem;
+                padding: 0 1.75rem 1.625rem;
+                font-family: "Roboto Serif";
+
+                > .service-icon {
+                    border-radius: 33px;
+                    background: #FFF;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    width: fit-content;
+                    margin: 1rem auto .625rem;
+                }
+
+                > h3 {
+                    color: var(--color-dark-brown);
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: 140%;
+                    margin-bottom: .625rem; 
+                }
+
+                p {
+                    color: rgba(0, 0, 0, 0.90);
+                    font-size: .875rem;
+                    line-height: 150%; 
+                }
+            }
+        }
+
+        > .slide_dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+        }
+    }
+        
+}
