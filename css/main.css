@@ -334,6 +334,10 @@
         line-height: 150%; 
     }
 
+    > button:hover {
+        background-color: #bb6d43;
+    }
+
     @media screen and (max-width: 425px) {
         > .section-title {
             display: flex;
@@ -431,6 +435,10 @@
             font-size: 1rem;
             font-weight: 600;
             line-height: 150%; 
+        }
+
+        > button:hover {
+            background-color: #bb6d43;
         }
         
     }
@@ -553,10 +561,11 @@
                 justify-content: center;
                 gap: .5rem;
                 margin-bottom: 3.125rem;
+                padding-inline: 1.5rem;
     
                 > h2 {
                     color: #29180F;
-                    font-size: 1.5rem;
+                    font-size: 1.3rem;
                     text-align: center;
                     font-weight: 600;
                     line-height: 120%;
@@ -564,8 +573,8 @@
                 }
 
               > img {
-                width: 2.5rem;
-                height: 2.5rem;
+                width: 2rem;
+                height: 2rem;
               }
             }
     
@@ -573,11 +582,11 @@
     
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                gap: 2rem;
+                justify-content: initial;
+                gap: 4rem;
                 margin-bottom: 2.75rem;
                 transform: .3s ease-in-out;
+                padding-inline: 2rem;
                 
         
                 > .services-card {
@@ -612,7 +621,9 @@
                         line-height: 150%; 
                     }
                 }
+
             }
+
     
             > .slide_dots {
                 display: flex;
@@ -850,11 +861,11 @@
             justify-content: center;
             flex-direction: column;
             gap: 2rem;
-            margin-bottom: 7rem;
+            margin-bottom: 5rem;
     
             > .big-post{
                 max-width: 23rem;
-                height: 40rem;
+                height: 35rem;
                 border-radius: 42px;
                 border: 3px solid #C9B079;
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -876,7 +887,7 @@
                         margin-bottom: 1.1875rem;
                         color: var(--color-dark-brown);
                         font-family: "Roboto Serif";
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
                         font-weight: 600;
                         line-height: 120%;
             
@@ -885,20 +896,25 @@
                     > p {
                         color: rgba(0, 0, 0, 0.90);
                         font-family: "Roboto Serif";
-                        font-size: 1rem;
+                        font-size: .8rem;
                         line-height: 150%; 
                         margin-bottom: 1.75rem;                      
                     }
+
     
                     > a {
                         display: flex;
                         align-items: center;
                         gap: .5rem;
                         color: var(--color-dark-brown);
-                        font-size: .9rem;
+                        font-size: .8rem;
                         font-weight: 600;
                         line-height: 150%;
                         text-decoration: none;
+                    }
+
+                    > a:hover {
+                        color: rgba(51, 51, 51, 0.82);
                     }
                 }
             }
@@ -914,7 +930,7 @@
 
                     > img {
                         width: 23rem;
-                        height: 22rem;
+                        height: 21rem;
                     }
 
                     > .small-post-info{
@@ -927,7 +943,7 @@
                     padding-bottom: 3rem;
             
                     img{
-                        height: 22rem;
+                        height: 21rem;
                         width: 23rem;
                     }
 
@@ -942,7 +958,7 @@
                     align-items: center; 
                     flex-direction: column;
                     max-width: 23rem;
-                    height: 40rem;
+                    height: 35rem;
                     border-radius: 42px;
                     border: 3px solid #C9B079;
                     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -954,7 +970,7 @@
                        
                         > h3 {
                             color: #29180F;
-                            font-size: 1.2rem;
+                            font-size: 1rem;
                             font-weight: 600;
                             line-height: 139.5%;
                             margin-bottom: .5rem;      
@@ -962,7 +978,7 @@
             
                         > p {
                             color: rgba(0, 0, 0, 0.90);
-                            font-size: .9rem;
+                            font-size: .8rem;
                             line-height: 150%;
                             margin-bottom: 1.125rem;
                         }
@@ -972,10 +988,14 @@
                             align-items: center;
                             gap: .5rem;
                             color: var(--color-dark-brown);
-                            font-size: 1rem;
+                            font-size: .8rem;
                             font-weight: 600;
                             line-height: 150%;
                             text-decoration: none;
+                        }
+
+                        > a:hover {
+                            color: rgba(51, 51, 51, 0.82);
                         }
                     }
                 }
@@ -1143,7 +1163,7 @@
 
     @media screen and (max-width: 425px) {
 
-        padding-inline: 2rem;
+        padding-inline: 0;
 
         > .feedback-content {
             max-width: 90rem;
@@ -1188,10 +1208,10 @@
             > .feedback-cards-wrapper {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                flex-direction: column;
+                justify-content: initial;
                 gap: 2rem;
                 margin-bottom: 3.625rem;
+                pa
     
     
                 > .feedback-card:nth-child(1){
@@ -1217,14 +1237,14 @@
                     text-align: start;
                     border: 3px solid #C9B079;
                     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-                    max-width: 25.9375rem;
-                    padding: 0 1.75rem 1.625rem;
+                    max-width: 21.5rem;
+                    padding: 0 1.2rem 1rem;
                     font-family: "Roboto Serif";
                     padding: 1.6875rem 2rem 1.6875rem 2rem;
     
                     > p {
                         color: rgba(0, 0, 0, 0.90);
-                        font-size: 1.1rem;
+                        font-size: .9rem;
                         line-height: 150%; 
                         margin-bottom: 1.125rem;
                     }

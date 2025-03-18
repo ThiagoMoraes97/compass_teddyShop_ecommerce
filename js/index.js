@@ -55,17 +55,26 @@ function verifyEmail(event) {
     const email = emailInput.value;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (emailRegex.test(email)) {
-        alert('Email enviado com sucesso!');
+        verifyEmailForm.classList.remove("invalid");
+        alert('Email enviado com sucesso!'); 
     } else {
-        alert('Email inválido!');
+        verifyEmailForm.classList.add("invalid"); 
     }
 
     emailInput.value = '';
 }
 
 function generateSliderDots() {
+
+    const windowWidth = window.innerWidth;
+    let numberOfSliderDots;
+
+    if (windowWidth <= 768) {
+        numberOfSliderDots = (sliderCards.length);
+    } else {
+        numberOfSliderDots = (sliderCards.length) - 2;
+    }
  
-    let numberOfSliderDots = (sliderCards.length) - 2;
     let index;
 
     for (let i = 0; i < numberOfSliderDots; i++) {
@@ -81,7 +90,15 @@ function generateSliderDots() {
 }
 
 function generateFeedbackSliderDots() {
-    let numberOfSliderDots = (feedbackCards.length) - 2;
+    const windowWidth = window.innerWidth;
+    let numberOfSliderDots;
+
+    if (windowWidth <= 768) {
+        numberOfSliderDots = (sliderCards.length);
+    } else {
+        numberOfSliderDots = (sliderCards.length) - 2;
+    }
+    
     let index;
 
     for (let i = 0; i < numberOfSliderDots; i++) {
@@ -105,7 +122,15 @@ function moveSliderCards(index) {
         return;
     }
 
-    const cardWidth = sliderCards[0].offsetWidth + 48; 
+    const windowWidth = window.innerWidth;
+    let cardWidth;
+
+    if (windowWidth <= 768) {
+        cardWidth = sliderCards[0].offsetWidth + 65;
+    } else {
+        cardWidth = sliderCards[0].offsetWidth + 48; 
+    }
+
     
     if (currentIndex < index) {
         slider.scrollLeft += cardWidth * (index - currentIndex); 
@@ -135,7 +160,14 @@ function updateCurrentDot(index) {
 function moveFeedbackSliderCards(index) {
     if (currentIndexFeedback === index) return;
 
-    const cardWidth = feedbackCards[0].offsetWidth + 48;
+    const windowWidth = window.innerWidth;
+    let cardWidth;
+
+    if (windowWidth <= 768) {
+        cardWidth = sliderCards[0].offsetWidth + 70;
+    } else {
+        cardWidth = sliderCards[0].offsetWidth + 48; 
+    }
 
     if (currentIndexFeedback < index) {
         feedbackSlider.scrollLeft += cardWidth * (index - currentIndexFeedback); 
