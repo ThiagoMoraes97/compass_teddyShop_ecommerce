@@ -12,9 +12,10 @@
     --color-peach: #F0DACD;
     --color-brown: #BF8B70;
     --color-dark-brown: #29180F;
-  }
+}
 
 body{
     background-color: var(--color-cream);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }

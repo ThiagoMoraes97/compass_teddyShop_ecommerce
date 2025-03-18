@@ -10,15 +10,16 @@
     <title>Teddy Shop</title>
     <link rel="shortcut icon" href="./assets/bearLogo.svg" type="image/svg+xml">
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <script src="./js/index.js" defer></script>
 </head>
 <body>
 
     <header>
         <div class="header_info">
           <div class="header_info_content">
-            <span>Hai bisogno di aiuto?</span>
+            <span class="header_info_message">Hai bisogno di aiuto?</span>
             <span>Ottieni subito uno sconto del 10%:Iscriviti alla newsletter</span>
-            <span>Informazioni di consegna</span>
+            <span class="header_info_message">Informazioni di consegna</span>
           </div>
         </div>
 
@@ -28,36 +29,93 @@
                     <img src="./assets/bearLogo.svg" alt="Imagem de um urso">
                     <img src="./assets/textLogo.svg" alt="Teddy Shop">
                 </div>
+                <div class="desktop_links">
+                    <div class="text_links">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><div class="category_options">
+                                <a href="#">Categorie <i class="ph-bold ph-caret-down"></i></a>
+                                <div class="options">
+                                    <ul>
+                                        <li>Selvaggi</li>
+                                        <li>Marini</li>
+                                        <li>Fattoria</li>
+                                        <li>Fantastici</li>
+                                    </ul>
+                                </div>
+                            </div></li>
+                            <li><a href="#">Novità</a></li>
+                            <li><a href="#">Marchi</a></li>
+                            <li><a href="#">Carte regalo</a></li>
+                            <li><a href="#">Chi siamo</a></li>
+                        </ul>    
+                    </div>
 
-                <div class="text_links">
-                    <a href="#">Home</a>
-                    <a href="#">Categorie <i class="ph-bold ph-caret-down"></i></a>
-                    <a href="#">Novità</a>
-                    <a href="#">Marchi</a>
-                    <a href="#">Carte regalo</a>
-                    <a href="#">Chi siamo</a>
+                    <div class="icon_links">
+                        <ul>
+                            <li><a href="#" class="ph-bold ph-magnifying-glass"></a></li>
+                            <li><a href="#" class="ph-bold ph-user"></a></li>
+                            <li><a href="#" class="ph-bold ph-heart"></a></li>
+                            <li><a href="#" class="ph-bold ph-bag"></a></li>
+                        </ul>    
+                    </div>
+
+                    <button>Acquista ora</button>
                 </div>
 
-                <div class="icon_links">
-                    <a href="#" class="ph-bold ph-magnifying-glass"></a>
-                    <a href="#" class="ph-bold ph-user"></a>
-                    <a href="#" class="ph-bold ph-heart"></a>
-                    <a href="#" class="ph-bold ph-bag"></a>
-                </div>
+                <button class="menu-button-open mobile_only"><i class="ph-bold ph-list"></i></button>
 
-                <button>Acquista ora</button>
+                <div class="mobile_menu mobile_only">
+                    <div class="mobile_menu_content">
+                        <div class="text_links">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><div class="category_options">
+                                    <a href="#" class="open_options">Categorie <i class="ph-bold ph-caret-down"></i></a>
+                                    <div id="options" class="options">
+                                        <ul>
+                                            <li>Selvaggi</li>
+                                            <li>Marini</li>
+                                            <li>Fattoria</li>
+                                            <li>Fantastici</li>
+                                        </ul>
+                                    </div>
+                                </div></li>
+                                <li><a href="#">Novità</a></li>
+                                <li><a href="#">Marchi</a></li>
+                                <li><a href="#">Carte regalo</a></li>
+                                <li><a href="#">Chi siamo</a></li>
+                            </ul>    
+                        </div>
+        
+                        <div class="icon_links">
+                            <ul>
+                                <li><a href="#" class="ph-bold ph-magnifying-glass"></a></li>
+                                <li><a href="#" class="ph-bold ph-user"></a></li>
+                                <li><a href="#" class="ph-bold ph-heart"></a></li>
+                                <li><a href="#" class="ph-bold ph-bag"></a></li>
+                            </ul>    
+                        </div>
+        
+                        <button>Acquista ora</button>
+                    </div>
+                    <button class="menu-button-close"><i class="ph-bold ph-x"></i></button>
+                </div>
+              
             </div>
         </nav>
     </header>
 
     <main>
         <section class="banner">
+            <img src="./assets/banner-img.png" alt="Imagende um urso">
+            
             <div class="banner-offer">
                 <div class="banner_offer-title">
                     <p>"Ecco l'offerta GUND:</p>
                 </div>
                 <div class="banner-offer-info">
-                    <p>40% di sconto dal 20 aprile al 5 maggio!"</p>
+                     <p>40% di sconto dal 20 aprile al 5 maggio!"</p>
                 </div>
             </div>
         </section>
@@ -191,6 +249,16 @@
                         <p>
                             Siamo impegnati a utilizzare materiali di qualità per i nostri peluche, per garantirti un 
                             prodotto che durerà nel tempo.
+                        </p>
+                    </div>
+
+                    <div class="services-card">
+                        <div class="service-icon">
+                            <img src="./assets/crow-service.svg" alt="Imagem de uma coroa."> 
+                        </div>
+                        <h3>Servizio eccellente</h3>
+                        <p>
+                            La nostra assistenza clienti è a tua disposizione per rispondere a tutte le tue domande e risolvere qualsiasi problema.
                         </p>
                     </div>
 
@@ -390,7 +458,7 @@
                     <p>Resta aggiornato sulle ultime novità, promozioni e offerte speciali.</p>
                 </div>
                 <div class="newsletter-input">
-                    <form>
+                    <form id="verify_email">
                         <label for="email">inserisci la tua emai</label>
                         <input type="email" id="email" placeholder="inserisci la tua email">
                         <button>Isciviti adesso</button>
