@@ -190,20 +190,15 @@ nav{
 
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 425px) {
 
         > .nav_content{
             max-width: 27rem;
             padding: .8rem 1.5rem;
-            display: flex;
-            align-items: center;
-            margin: 0 auto;
             justify-content: space-between;
     
             > .logo {
-                display: flex;
-                align-items: center;
-
+            
                 img {
                     height: 50px;
                     width: 50px;
