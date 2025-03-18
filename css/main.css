@@ -444,12 +444,13 @@
     padding-top: 3.9375rem;
 
     > .services-content {
-        max-width: 90rem;
+        max-width: 1300px;
         overflow-x: hidden;
         margin: 0 auto;
         font-family: "Roboto Serif";
         padding-bottom: 4.4375rem;
         padding-inline: 1.5rem;
+        overflow: hidden;
 
 
         > .section-title{
@@ -472,9 +473,14 @@
 
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: initial;
+            overflow-x: auto; 
+            scroll-behavior: smooth; 
+            overflow: hidden;
+            flex-wrap: nowrap;
             gap: 3rem;
             margin-bottom: 2.75rem;
+            padding: .3rem;
             
     
             > .services-card {
@@ -483,9 +489,9 @@
                 text-align: center;
                 border: 3px solid #C9B079;
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-                max-width: 23.625rem;
                 padding: 0 1.75rem 1.625rem;
                 font-family: "Roboto Serif";
+                flex: 0 0 378px;  
 
                 > .service-icon {
                     border-radius: 33px;
@@ -516,6 +522,18 @@
             align-items: center;
             justify-content: center;
             gap: .5rem;
+
+            > .dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: var(--color-white);
+                cursor: pointer;
+            }
+
+            > .dot.active {
+                background-color: var(--color-dark-brown);
+            }
         }
     }
 
@@ -559,6 +577,7 @@
                 flex-direction: column;
                 gap: 2rem;
                 margin-bottom: 2.75rem;
+                transform: .3s ease-in-out;
                 
         
                 > .services-card {
@@ -600,6 +619,18 @@
                 align-items: center;
                 justify-content: center;
                 gap: .5rem;
+    
+                > .dot {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: var(--color-white);
+                    cursor: pointer;
+                }
+    
+                > .dot.active {
+                    background-color: var(--color-dark-brown);
+                }
             }
         }
         
@@ -784,6 +815,8 @@
 
         }
 
+       
+
         
     }
 
@@ -963,10 +996,11 @@
     padding-inline: 1.5rem;
 
     > .feedback-content {
-        max-width: 90rem;
+        max-width: 1400px;
         margin: 0 auto;
         font-family: "Roboto Serif";
         padding-bottom: 3rem;
+        padding-inline: 1.5rem;
 
         > .section-title {
             display: flex;
@@ -983,7 +1017,6 @@
             position: relative;
             top: -2rem;
             
-
             > img {
                 margin: .5rem .5rem .5rem 1rem;
                 width: 49px;
@@ -1002,12 +1035,17 @@
             }
         }
 
+
         > .feedback-cards-wrapper {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: initial;
+            scroll-behavior: smooth; 
             gap: 3rem;
             margin-bottom: 3.625rem;
+            padding: .3rem;
+            overflow: hidden;
+            flex-wrap: nowrap;
 
 
             > .feedback-card:nth-child(1){
@@ -1037,7 +1075,8 @@
                 padding: 0 1.75rem 1.625rem;
                 font-family: "Roboto Serif";
                 padding: 1.6875rem 2rem 1.6875rem 2rem;
-
+                flex: 0 0 415px; 
+                
                 > p {
                     color: rgba(0, 0, 0, 0.90);
                     font-size: 1.125rem;
@@ -1082,11 +1121,23 @@
             }
         }
 
-        > .slide_dots {
+        > .feedback_slide_dots {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: .5rem;
+
+            > .feedback_dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: var(--color-white);
+                cursor: pointer;
+            }
+
+            > .feedback_dot.active {
+                background-color: var(--color-dark-brown);
+            }
         }
     }
 
