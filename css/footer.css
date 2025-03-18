@@ -147,7 +147,7 @@
         }
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 500px) {
     
         > .newsletter {
             display: flex;
@@ -315,7 +315,7 @@
         margin: 0 auto;
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 500px) {
         > .copyright-content {
             display: flex;
             align-items: center;

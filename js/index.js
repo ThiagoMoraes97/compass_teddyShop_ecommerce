@@ -51,7 +51,7 @@ window.addEventListener('resize', uploadElementClasses);
 function uploadElementClasses() {
     const windowWidth = window.innerWidth;
 
-    if (windowWidth <= 768) {
+    if (windowWidth <= 800) {
         desktopLinks.classList.add('desktop_only');
         headerInfoMessages.forEach((msg) => msg.classList.add('desktop_only'));
         mobileMenu.classList.remove('mobile_only');
