@@ -121,13 +121,21 @@ function updateCurrentDot(index) {
 }
 
 function moveFeedbackSliderCards(index) {
-    if (currentIndexFeedback === index) return;
+    if (currentIndex === index) {
+        return;
+    }
 
-    const cardWidth = window.innerWidth <= 768 ? sliderCards[0].offsetWidth + 70 : sliderCards[0].offsetWidth + 48;
+    const cardWidth = feedbackCards[0].offsetWidth + 48; 
+    
+    if (currentIndex < index) {
+        feedbackSlider.scrollLeft += cardWidth * (index - currentIndex); 
+    } else {
+        feedbackSlider.scrollLeft -= cardWidth * (currentIndex - index); 
+    }
 
-    feedbackSlider.scrollLeft += cardWidth * (index - currentIndexFeedback);
-    currentIndexFeedback = index;
+    currentIndex = index;
 }
+
 
 function updateCurrentFeedbackDot(index) {
     const currentDot = document.querySelector('.feedback_dot.active');
