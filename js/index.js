@@ -121,19 +121,24 @@ function updateCurrentDot(index) {
 }
 
 function moveFeedbackSliderCards(index) {
-    if (currentIndex === index) {
-        return;
-    }
+    if (currentIndexFeedback === index) return;
 
-    const cardWidth = feedbackCards[0].offsetWidth + 48; 
-    
-    if (currentIndex < index) {
-        feedbackSlider.scrollLeft += cardWidth * (index - currentIndex); 
+    const windowWidth = window.innerWidth;
+    let cardWidth;
+
+    if (windowWidth <= 768) {
+        cardWidth = sliderCards[0].offsetWidth + 70;
     } else {
-        feedbackSlider.scrollLeft -= cardWidth * (currentIndex - index); 
+        cardWidth = sliderCards[0].offsetWidth + 48; 
     }
 
-    currentIndex = index;
+    if (currentIndexFeedback < index) {
+        feedbackSlider.scrollLeft += cardWidth * (index - currentIndexFeedback); 
+    } else {
+        feedbackSlider.scrollLeft -= cardWidth * (currentIndexFeedback - index); 
+    }
+   
+    currentIndexFeedback = index;
 }
 
 
