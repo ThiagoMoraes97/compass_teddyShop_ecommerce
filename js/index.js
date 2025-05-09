@@ -123,11 +123,24 @@ function updateCurrentDot(index) {
 function moveFeedbackSliderCards(index) {
     if (currentIndexFeedback === index) return;
 
-    const cardWidth = window.innerWidth <= 768 ? sliderCards[0].offsetWidth + 70 : sliderCards[0].offsetWidth + 48;
+    const windowWidth = window.innerWidth;
+    let cardWidth;
 
-    feedbackSlider.scrollLeft += cardWidth * (index - currentIndexFeedback);
+    if (windowWidth <= 768) {
+        cardWidth = sliderCards[0].offsetWidth + 70;
+    } else {
+        cardWidth = sliderCards[0].offsetWidth + 48; 
+    }
+
+    if (currentIndexFeedback < index) {
+        feedbackSlider.scrollLeft += cardWidth * (index - currentIndexFeedback); 
+    } else {
+        feedbackSlider.scrollLeft -= cardWidth * (currentIndexFeedback - index); 
+    }
+   
     currentIndexFeedback = index;
 }
+
 
 function updateCurrentFeedbackDot(index) {
     const currentDot = document.querySelector('.feedback_dot.active');
